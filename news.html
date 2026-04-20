@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Новости — Олимпиадный Центр</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="news.html" class="nav-link active">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Новости</span>
+    </div>
+    <h1>Новости и события</h1>
+    <p>Последние достижения учеников, мероприятия Олимпиадного Центра и важные обновления.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Search + Filter -->
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:32px">
+      <div class="search-box" style="flex:1;min-width:240px;max-width:400px">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="news-search" placeholder="Поиск по новостям..." />
+      </div>
+      <div class="filter-bar" style="margin-bottom:0">
+        <button class="filter-btn active" data-news="all">Все</button>
+        <button class="filter-btn" data-news="achievement">🏆 Достижения</button>
+        <button class="filter-btn" data-news="event">📅 Мероприятия</button>
+        <button class="filter-btn" data-news="update">📂 Обновления</button>
+        <button class="filter-btn" data-news="announcement">📢 Анонсы</button>
+      </div>
+    </div>
+
+    <!-- Featured -->
+    <div class="news-featured">
+      <div class="news-featured-main" data-news-category="achievement">
+        <div class="news-featured-img">🥇</div>
+        <div class="news-featured-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span class="badge badge-green">Достижение</span>
+            <span class="news-date">10 апреля 2026</span>
+          </div>
+          <div class="news-featured-title">Три призовых места на региональном этапе ВсОШ по математике!</div>
+          <p class="news-featured-excerpt">Ученики нашей школы показали выдающийся результат на региональном этапе Всероссийской олимпиады по математике. Петров Алексей занял 1-е место, Смирнова Екатерина и Орлов Дмитрий стали призёрами. Все трое теперь претендуют на участие в заключительном этапе. Мы гордимся нашими ребятами и желаем им удачи на пути к финалу!</p>
+          <div style="margin-top:20px">
+            <a href="#" class="btn btn-primary">Читать полностью →</a>
+          </div>
+        </div>
+      </div>
+      <div class="news-sidebar">
+        <div class="news-sidebar-item" data-news-category="event">
+          <div class="news-sidebar-emoji">🎤</div>
+          <div class="news-sidebar-content">
+            <div class="title">Открытая лекция по олимпиадной физике для 9–11 классов</div>
+            <div class="date">5 апреля 2026 · Мероприятие</div>
+          </div>
+        </div>
+        <div class="news-sidebar-item" data-news-category="achievement">
+          <div class="news-sidebar-emoji">🥈</div>
+          <div class="news-sidebar-content">
+            <div class="title">Призёр Менделеевской олимпиады — Никитина Вера</div>
+            <div class="date">2 апреля 2026 · Достижение</div>
+          </div>
+        </div>
+        <div class="news-sidebar-item" data-news-category="announcement">
+          <div class="news-sidebar-emoji">📢</div>
+          <div class="news-sidebar-content">
+            <div class="title">Запись на подготовительные занятия по информатике открыта</div>
+            <div class="date">28 марта 2026 · Анонс</div>
+          </div>
+        </div>
+        <div class="news-sidebar-item" data-news-category="update">
+          <div class="news-sidebar-emoji">📂</div>
+          <div class="news-sidebar-content">
+            <div class="title">Обновлены материалы по химии и биологии</div>
+            <div class="date">1 апреля 2026 · Обновление</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         КАК ДОБАВИТЬ НОВОСТЬ:
+         1. Скопируйте один блок <div class="news-card">...</div>
+         2. Вставьте ПЕРЕД остальными карточками (новые — сверху)
+         3. Заполните: data-news-category, badge, дату, заголовок, лид
+         4. Для изображения — см. два варианта ниже
+         5. href в кнопке "Читать →" → укажите путь к файлу статьи
+            напр. href="news/math-regional-2026.html"
+            (скопируйте news-article.html, переименуйте, заполните)
+         ═══════════════════════════════════════════════════════════ -->
+    <h3 style="font-size:20px;font-weight:700;margin-bottom:24px">Все новости</h3>
+    <div class="grid-3" style="row-gap:24px">
+
+      <!-- ───────────────────────────────────────────────
+           КАРТОЧКА С ФОТОГРАФИЕЙ (вариант A — есть фото)
+           Положите файл в img/, укажите путь в src
+           ─────────────────────────────────────────────── -->
+      <div class="news-card" data-news-category="achievement">
+        <!--
+          ФОТО: замените src на путь к своему файлу.
+          Фото автоматически обрежется до нужного размера (object-fit:cover).
+          Рекомендуемые размеры: минимум 600×400 px, формат JPG/WebP.
+          Если фото нет — удалите <img> и верните эмодзи-заглушку (вариант B ниже).
+        -->
+        <div class="news-card-img">
+          <img src="img/news-mendeleev-2026.jpg" alt="Никитина Вера на олимпиаде"
+               onerror="this.parentElement.innerHTML='🥈';this.parentElement.style.background='linear-gradient(135deg,#eef7f0,#d1fae5)'">
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-green">Достижение</span><span class="news-date">2 апр 2026</span></div>
+          <div class="news-card-title">Никитина Вера — призёр Менделеевской олимпиады по химии</div>
+          <div class="news-card-excerpt">Вера заняла 2-е место в региональном туре Менделеевской олимпиады, войдя в топ-3 среди более 200 участников.</div>
+          <!-- ССЫЛКА: замените на путь к файлу статьи -->
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <!-- ───────────────────────────────────────────────
+           КАРТОЧКА БЕЗ ФОТО (вариант B — эмодзи-заглушка)
+           Используйте, пока нет фотографии.
+           Когда появится фото — замените на вариант A выше.
+           ─────────────────────────────────────────────── -->
+      <div class="news-card" data-news-category="event">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#e8f4fb,#dbeafe)">🎤</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-blue">Мероприятие</span><span class="news-date">5 апр 2026</span></div>
+          <div class="news-card-title">Лекция по олимпиадной физике: разбор задач регионального этапа</div>
+          <div class="news-card-excerpt">Более 40 учеников посетили разбор заданий регионального этапа ВсОШ по физике. Лектор — призёр заключительного этапа.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="update">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#fef9ee,#fde68a40)">📂</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-pink">Обновление</span><span class="news-date">1 апр 2026</span></div>
+          <div class="news-card-title">Добавлены новые конспекты по химии и молекулярной биологии</div>
+          <div class="news-card-excerpt">Загружено 6 новых материалов по органической химии (механизмы реакций) и молекулярной биологии (репликация, трансляция).</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="announcement">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#fceef6,#fde8f5)">📢</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-pink">Анонс</span><span class="news-date">28 мар 2026</span></div>
+          <div class="news-card-title">Открывается запись на подготовительные занятия по информатике</div>
+          <div class="news-card-excerpt">С 1 апреля по вторникам и пятницам в 15:30 будут проходить подготовительные занятия по олимпиадной информатике для 8–10 классов.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="achievement">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a40)">🏅</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-green">Достижение</span><span class="news-date">20 мар 2026</span></div>
+          <div class="news-card-title">Победитель олимпиады «Высшая проба» по экономике</div>
+          <div class="news-card-excerpt">Коваленко Максим стал победителем заключительного тура олимпиады НИУ ВШЭ «Высшая проба» по экономике — это олимпиада I уровня.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="event">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#eef7f0,#d1fae5)">🌿</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-blue">Мероприятие</span><span class="news-date">15 мар 2026</span></div>
+          <div class="news-card-title">Встреча Олимпиадного Центра: итоги муниципального этапа</div>
+          <div class="news-card-excerpt">Подвели итоги муниципального этапа ВсОШ: 18 победителей и призёров по 9 предметам. Обсудили планы подготовки к региональному этапу.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="achievement">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#e8f4fb,#bfdbfe)">🇬🇧</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-green">Достижение</span><span class="news-date">10 мар 2026</span></div>
+          <div class="news-card-title">Пятеро учеников прошли на региональный этап по английскому языку</div>
+          <div class="news-card-excerpt">По итогам муниципального этапа пять наших учеников приглашены на региональный этап ВсОШ по английскому языку.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="update">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#f3e8ff,#ede9fe)">📐</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-pink">Обновление</span><span class="news-date">5 мар 2026</span></div>
+          <div class="news-card-title">Загружены разборы задач муниципального этапа по математике</div>
+          <div class="news-card-excerpt">Опубликованы подробные решения всех задач муниципального этапа ВсОШ по математике 2025/2026 года.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+      <div class="news-card" data-news-category="announcement">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#fceef6,#fce7f3)">🗓️</div>
+        <div class="news-card-body">
+          <div class="news-card-meta"><span class="badge badge-pink">Анонс</span><span class="news-date">1 мар 2026</span></div>
+          <div class="news-card-title">Региональный этап ВсОШ: расписание и советы по подготовке</div>
+          <div class="news-card-excerpt">Публикуем актуальное расписание регионального этапа и рекомендации по финальной подготовке от наших кураторов.</div>
+          <div class="news-card-footer"><span></span><a href="news-article.html" class="btn btn-primary btn-sm">Читать →</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Load more -->
+    <div class="text-center mt-32">
+      <button class="btn btn-outline btn-lg" onclick="this.textContent='Больше новостей нет';this.disabled=true">Загрузить ещё</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="img/oc.png" alt="ОЦ" class="logo-img" onerror="this.style.display='none'"><div class="logo-text"><span class="logo-title">Олимпиадный Центр</span><span class="logo-subtitle">Гимназия №179</span></div></div>
+        <p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам.</p>
+      </div>
+      <div><div class="footer-heading">Разделы</div><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="olympiads.html">Олимпиады</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">О нас</a></li></ul></div>
+      <div><div class="footer-heading">Предметы</div><ul class="footer-links"><li><a href="subject.html?subject=math">Математика</a></li><li><a href="subject.html?subject=physics">Физика</a></li><li><a href="subject.html?subject=cs">Информатика</a></li><li><a href="subject.html?subject=english">Английский</a></li><li><a href="olympiads.html">Все предметы →</a></li></ul></div>
+      <div><div class="footer-heading">Контакты</div><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📧</span><span>olympiadcentre@mail.ru</span></div><div class="footer-contact-item"><span class="icon">📱</span><span>Telegram: t.me/olympiadcenter179</span></div></div></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025–2027 Олимпиадный Центр Гимназии №179</span><span>Сделано учениками для учеников 🏆</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

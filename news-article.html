@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  ШАБЛОН ОТДЕЛЬНОЙ СТРАНИЦЫ НОВОСТИ                      ║
+  ║  Инструкция по заполнению — ищи комментарии ЗАМЕНИТЬ    ║
+  ╚══════════════════════════════════════════════════════════╝
+  -->
+  <!-- ЗАМЕНИТЬ: заголовок вкладки -->
+  <title>Название новости — Олимпиадный Центр</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Стили статьи */
+    .article-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #0d5fa3 100%);
+      padding: 64px 0 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .article-hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .article-hero h1 {
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+    .article-hero-desc {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      max-width: 640px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .article-cover {
+      margin-top: 40px;
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      overflow: hidden;
+      max-height: 480px;
+      position: relative;
+    }
+    .article-cover img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .article-cover-placeholder {
+      width: 100%;
+      height: 320px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .article-body h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 40px 0 16px;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--text);
+    }
+    .article-body p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+    .article-body li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .article-body blockquote {
+      border-left: 4px solid var(--primary);
+      margin: 28px 0;
+      padding: 16px 24px;
+      background: var(--primary-light);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 16px;
+      color: var(--text);
+      font-style: italic;
+      line-height: 1.7;
+    }
+    /* Встроенное изображение внутри статьи */
+    .article-img {
+      margin: 32px 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .article-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .article-img figcaption {
+      font-size: 13px;
+      color: var(--text-light);
+      text-align: center;
+      padding: 10px 16px;
+      background: var(--bg-light);
+    }
+    /* Сетка фото внутри статьи */
+    .article-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 32px 0;
+    }
+    .article-photo-grid.grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .article-photo-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      display: block;
+    }
+    /* Достижение / карточка результата */
+    .result-card {
+      background: linear-gradient(135deg, var(--green-light), var(--primary-light));
+      border: 1px solid var(--green);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin: 32px 0;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .result-card-icon { font-size: 40px; }
+    .result-card-text h4 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .result-card-text p { font-size: 14px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+    /* Навигация между новостями */
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .article-nav-link {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      transition: var(--transition);
+      display: block;
+    }
+    .article-nav-link:hover { border-color: var(--primary); background: var(--primary-light); }
+    .article-nav-link .dir { font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
+    .article-nav-link .title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .article-nav-link.next { text-align: right; }
+    @media (max-width: 640px) {
+      .article-nav { grid-template-columns: 1fr; }
+      .article-photo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="news.html" class="nav-link active">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     ГЕРОЙ СТАТЬИ
+     ЗАМЕНИТЬ всё, что помечено "ЗАМЕНИТЬ"
+     ═══════════════════════════════════════════════════ -->
+<section class="article-hero">
+  <div class="container">
+    <div class="breadcrumb" style="margin-bottom:20px">
+      <a href="index.html" style="color:rgba(255,255,255,0.6)">Главная</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="news.html" style="color:rgba(255,255,255,0.6)">Новости</a>
+      <span class="breadcrumb-sep">›</span>
+      <!-- ЗАМЕНИТЬ: краткое название рубрики -->
+      <span style="color:white">Достижения</span>
+    </div>
+
+    <div class="article-hero-meta">
+      <!-- ЗАМЕНИТЬ: badge-green / badge-blue / badge-pink / badge-gray -->
+      <span class="badge badge-green">Достижение</span>
+      <!-- ЗАМЕНИТЬ: дата -->
+      <span style="font-size:13px;color:rgba(255,255,255,0.6)">10 апреля 2026</span>
+      <!-- ЗАМЕНИТЬ (или удалить): автор -->
+      <span style="font-size:13px;color:rgba(255,255,255,0.5)">· Автор: Смирнова Е.</span>
+    </div>
+
+    <!-- ЗАМЕНИТЬ: заголовок статьи -->
+    <h1>Три призовых места на региональном этапе ВсОШ по математике</h1>
+
+    <!-- ЗАМЕНИТЬ: лид (1–2 предложения) -->
+    <p class="article-hero-desc">Ученики нашей гимназии показали выдающийся результат на региональном этапе — один победитель и два призёра. Теперь все трое допущены к заключительному этапу.</p>
+
+    <!--
+    ОБЛОЖКА СТАТЬИ — выберите один из вариантов:
+
+    Вариант A: своя фотография
+    Положите файл в папку img/ (напр. img/news-math-2026.jpg)
+    и раскомментируйте строки ниже:
+
+    <div class="article-cover">
+      <img src="img/news-math-2026.jpg" alt="Описание фото">
+    </div>
+
+    Вариант B: заглушка с эмодзи (удалите, когда добавите фото)
+    -->
+    <div class="article-cover">
+      <div class="article-cover-placeholder">🥇</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ТЕЛО СТАТЬИ — пишите здесь текст новости
+     ═══════════════════════════════════════════════════ -->
+<div class="article-body">
+
+  <!-- Основной текст -->
+  <p>
+    <!-- ЗАМЕНИТЬ: текст первого абзаца -->
+    На региональном этапе Всероссийской олимпиады школьников по математике, прошедшем 20–22 января 2026 года, наша гимназия представила пятерых участников. Трое из них вернулись с наградами.
+  </p>
+
+  <!-- Карточка результата (можно добавлять несколько или удалить) -->
+  <div class="result-card">
+    <div class="result-card-icon">🥇</div>
+    <div class="result-card-text">
+      <!-- ЗАМЕНИТЬ: имя, результат, описание -->
+      <h4>Петров Алексей — победитель</h4>
+      <p>11 класс. Набрал 87 из 100 баллов, занял 1-е место в регионе среди учеников 11 класса. Допущен к заключительному этапу ВсОШ.</p>
+    </div>
+  </div>
+
+  <div class="result-card">
+    <div class="result-card-icon">🥈</div>
+    <div class="result-card-text">
+      <h4>Смирнова Екатерина — призёр</h4>
+      <p>11 класс. 74 балла, призёр регионального этапа. Также допущена к финалу.</p>
+    </div>
+  </div>
+
+  <p>
+    <!-- ЗАМЕНИТЬ: продолжение текста -->
+    Поздравляем ребят и их наставников! Подготовка к заключительному этапу уже начинается — следите за расписанием занятий в разделе новостей.
+  </p>
+
+  <!-- Цитата (опционально) -->
+  <blockquote>
+    <!-- ЗАМЕНИТЬ: цитата и подпись -->
+    «Я готовился к этой олимпиаде весь год. Особенно помогли разборы задач на занятиях нашего центра» — Петров Алексей, 11А
+  </blockquote>
+
+  <!-- Раздел с фото (опционально) -->
+  <h2>Фотографии с церемонии награждения</h2>
+  <p>Несколько фотографий с торжественного вручения дипломов:</p>
+
+  <!--
+  ФОТОГРАФИИ ВНУТРИ СТАТЬИ
+
+  Одна фотография:
+  <figure class="article-img">
+    <img src="img/news-math-ceremony.jpg" alt="Описание фото">
+    <figcaption>Подпись под фото (опционально)</figcaption>
+  </figure>
+
+  Сетка 2 фото:
+  -->
+  <div class="article-photo-grid">
+    <!-- ЗАМЕНИТЬ: пути к своим фото -->
+    <img src="img/news-math-2026.jpg" alt="Фото 1" onerror="this.style.display='none'">
+    <img src="img/news-math-2026b.jpg" alt="Фото 2" onerror="this.style.display='none'">
+  </div>
+  <!--
+  Сетка 3 фото — добавьте class="article-photo-grid grid-3" и три img
+  -->
+
+  <h2>Что дальше</h2>
+  <p>
+    Заключительный этап ВсОШ по математике пройдёт в апреле 2026 года. Наши участники продолжают интенсивную подготовку. В расписании центра появятся дополнительные занятия — следите за объявлениями.
+  </p>
+
+  <!-- Навигация между новостями -->
+  <div class="article-nav">
+    <!-- ЗАМЕНИТЬ: ссылка и заголовок предыдущей новости (или удалите этот блок) -->
+    <a href="news-article.html" class="article-nav-link">
+      <div class="dir">← Предыдущая</div>
+      <div class="title">Призёр Менделеевской олимпиады по химии</div>
+    </a>
+    <!-- ЗАМЕНИТЬ: ссылка и заголовок следующей новости (или удалите этот блок) -->
+    <a href="news-article.html" class="article-nav-link next">
+      <div class="dir">Следующая →</div>
+      <div class="title">Открылась запись на занятия по информатике</div>
+    </a>
+  </div>
+
+</div>
+<!-- конец article-body -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><div class="logo-placeholder">ОЦ</div><div class="logo-text"><span class="logo-title">Олимпиадный Центр</span><span class="logo-subtitle">Гимназия №179</span></div></div><p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам.</p></div>
+      <div><div class="footer-heading">Разделы</div><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="olympiads.html">Олимпиады</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">О нас</a></li></ul></div>
+      <div><div class="footer-heading">Предметы</div><ul class="footer-links"><li><a href="subject.html?subject=math">Математика</a></li><li><a href="subject.html?subject=physics">Физика</a></li><li><a href="subject.html?subject=cs">Информатика</a></li><li><a href="subject.html?subject=english">Английский</a></li><li><a href="olympiads.html">Все предметы →</a></li></ul></div>
+      <div><div class="footer-heading">Контакты</div><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📧</span><span>olymp@gym179.ru</span></div><div class="footer-contact-item"><span class="icon">📱</span><span>Telegram: t.me/olympiadcenter179</span></div><div class="footer-contact-item"><span class="icon">📍</span><span>Кабинет 214, корпус А</span></div></div></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025–2027 Олимпиадный Центр Гимназии №179</span><span>Сделано учениками для учеников 🏆</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

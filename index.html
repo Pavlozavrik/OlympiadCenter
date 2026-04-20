@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Олимпиадный Центр — Главная</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Главная</a></li>
+          <li><a href="news.html" class="nav-link">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          🏆 Ученическая организация
+        </div>
+        <h1>
+          Твой путь<br>
+          к <span class="highlight-blue">победе</span><br>
+          на <span class="highlight-pink">олимпиадах</span>
+        </h1>
+        <p class="hero-desc">
+          Олимпиадный Центр  — это команда учеников, которые помогают готовиться к ВсОШ и перечневым олимпиадам. Мы собираем актуальные даты, материалы и советы по 24 предметам.
+        </p>
+        <div class="hero-actions">
+          <a href="olympiads.html" class="btn btn-primary btn-lg">Выбрать предмет</a>
+          <a href="about.html" class="btn btn-outline-white btn-lg">О центре</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <a href="olympiads.html?filter=exact" class="hero-card-mini" style="text-decoration:none">
+          <div class="hero-card-icon blue">📐</div>
+          <div class="hero-card-text">
+            <div class="label">Точные науки</div>
+            <div class="value">Математика, Физика, ИТ</div>
+          </div>
+        </a>
+        <a href="olympiads.html?filter=humanities" class="hero-card-mini" style="text-decoration:none">
+          <div class="hero-card-icon pink">📚</div>
+          <div class="hero-card-text">
+            <div class="label">Гуманитарные науки</div>
+            <div class="value">История, Литература, Право</div>
+          </div>
+        </a>
+        <a href="olympiads.html?filter=languages" class="hero-card-mini" style="text-decoration:none">
+          <div class="hero-card-icon green">🌍</div>
+          <div class="hero-card-text">
+            <div class="label">Иностранные языки</div>
+            <div class="value">EN, DE, FR, ES, ZH, IT</div>
+          </div>
+        </a>
+        <a href="olympiads.html?filter=natural" class="hero-card-mini" style="text-decoration:none">
+          <div class="hero-card-icon" style="background:rgba(154,207,165,0.2)">🌿</div>
+          <div class="hero-card-text">
+            <div class="label">Естественные науки</div>
+            <div class="value">Химия, Биология, Экология</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section-sm stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" style="color:var(--primary)" data-count="24" data-suffix="">24</div>
+        <div class="stat-label">Предмета ВсОШ</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" style="color:var(--accent)" data-count="150" data-suffix="+">150+</div>
+        <div class="stat-label">Олимпиад отслеживается</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" style="color:var(--green-dark)" data-count="87" data-suffix="">87</div>
+        <div class="stat-label">Материалов для подготовки</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" style="color:#f59e0b" data-count="43" data-suffix="">43</div>
+        <div class="stat-label">Призёров в этом году</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="badge badge-blue mb-16">О нас</p>
+        <h2 class="section-title">Олимпиадный Центр — для учеников, силами учеников</h2>
+        <p class="section-subtitle">Мы — команда школьников, которые сами прошли путь олимпиадника и теперь помогают другим. Мы знаем, как найти нужную информацию и как готовиться эффективно.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon" style="background:var(--primary-light)">📅</div>
+            <div class="about-feature-text">
+              <h4>Актуальные даты и дедлайны</h4>
+              <p>Отслеживаем расписания всех этапов ВсОШ и более 100 перечневых олимпиад — чтобы вы не пропустили регистрацию.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon" style="background:var(--accent-light)">📂</div>
+            <div class="about-feature-text">
+              <h4>Материалы для подготовки</h4>
+              <p>Конспекты, сборники задач, разборы олимпиад прошлых лет — всё собрано в одном месте по каждому предмету.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon" style="background:var(--green-light)">🎓</div>
+            <div class="about-feature-text">
+              <h4>Советы от призёров</h4>
+              <p>Ребята, которые уже победили, делятся своими стратегиями, лайфхаками и рекомендациями по подготовке.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-32">
+          <a href="about.html" class="btn btn-primary">Узнать больше о центре</a>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-img-main">🏆</div>
+        <div class="about-badge-float top-left">
+          <div style="font-size:13px;color:var(--text-muted);margin-bottom:2px">Следующий этап</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text)">ВсОШ Муниципальный</div>
+          <div style="font-size:13px;color:var(--accent);font-weight:600">15 декабря 2025</div>
+        </div>
+        <div class="about-badge-float bottom-right">
+          <div style="font-size:13px;color:var(--text-muted);margin-bottom:4px">Последнее достижение</div>
+          <div style="font-size:15px;font-weight:700;color:var(--green-dark)">🥇 Призёр регионального</div>
+          <div style="font-size:12px;color:var(--text-muted)">Математика — Петров А.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS PREVIEW -->
+<section class="section subjects-preview">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Выбери свой предмет</h2>
+        <p class="section-subtitle">24 предмета Всероссийской олимпиады школьников с полной информацией и материалами.</p>
+      </div>
+      <a href="olympiads.html" class="btn btn-outline">Все предметы →</a>
+    </div>
+    <div class="subjects-grid-mini">
+      <a href="subject.html?subject=math" class="subject-card-mini"><div class="emoji">📐</div><div class="name">Математика</div></a>
+      <a href="subject.html?subject=physics" class="subject-card-mini"><div class="emoji">⚛️</div><div class="name">Физика</div></a>
+      <a href="subject.html?subject=cs" class="subject-card-mini"><div class="emoji">💻</div><div class="name">Информатика</div></a>
+      <a href="subject.html?subject=chemistry" class="subject-card-mini"><div class="emoji">🧪</div><div class="name">Химия</div></a>
+      <a href="subject.html?subject=biology" class="subject-card-mini"><div class="emoji">🔬</div><div class="name">Биология</div></a>
+      <a href="subject.html?subject=english" class="subject-card-mini"><div class="emoji">🇬🇧</div><div class="name">Английский</div></a>
+      <a href="subject.html?subject=history" class="subject-card-mini"><div class="emoji">🏛️</div><div class="name">История</div></a>
+      <a href="subject.html?subject=russian" class="subject-card-mini"><div class="emoji">📝</div><div class="name">Русский язык</div></a>
+      <a href="subject.html?subject=literature" class="subject-card-mini"><div class="emoji">📚</div><div class="name">Литература</div></a>
+      <a href="subject.html?subject=geography" class="subject-card-mini"><div class="emoji">🌍</div><div class="name">География</div></a>
+      <a href="subject.html?subject=economics" class="subject-card-mini"><div class="emoji">📊</div><div class="name">Экономика</div></a>
+      <a href="olympiads.html" class="subject-card-mini" style="background:var(--primary-light);border-color:var(--primary)">
+        <div class="emoji">➕</div><div class="name" style="color:var(--primary)">Ещё 13 предметов</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING OLYMPIADS -->
+<section class="section" style="background:white">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Ближайшие олимпиады</h2>
+        <p class="section-subtitle">Не пропустите важные даты — следите за расписанием.</p>
+      </div>
+      <a href="olympiads.html" class="btn btn-outline">Все олимпиады →</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="olympiad-item">
+        <div class="olympiad-info">
+          <div class="olympiad-name">ВсОШ — Школьный этап (все предметы)</div>
+          <div class="olympiad-dates"><span>📅 15 октября — 30 ноября 2025</span></div>
+        </div>
+        <div class="olympiad-actions">
+          <span class="badge badge-school">Школьный</span>
+          <a href="olympiads.html" class="btn btn-outline btn-sm">Предметы →</a>
+        </div>
+      </div>
+      <div class="olympiad-item">
+        <div class="olympiad-info">
+          <div class="olympiad-name">Олимпиада «Ломоносов» — Математика, Физика, Химия и др.</div>
+          <div class="olympiad-dates"><span>📅 1 ноября 2025 — 31 января 2026</span></div>
+        </div>
+        <div class="olympiad-actions">
+          <span class="badge badge-final">Перечень</span>
+          <a href="#" class="btn btn-outline btn-sm">Подробнее</a>
+        </div>
+      </div>
+      <div class="olympiad-item">
+        <div class="olympiad-info">
+          <div class="olympiad-name">Олимпиада «Высшая проба» НИУ ВШЭ — несколько предметов</div>
+          <div class="olympiad-dates"><span>📅 10 ноября 2025 — 20 февраля 2026</span></div>
+        </div>
+        <div class="olympiad-actions">
+          <span class="badge badge-final">Перечень</span>
+          <a href="#" class="btn btn-outline btn-sm">Подробнее</a>
+        </div>
+      </div>
+      <div class="olympiad-item">
+        <div class="olympiad-info">
+          <div class="olympiad-name">ВсОШ — Муниципальный этап (все предметы)</div>
+          <div class="olympiad-dates"><span>📅 10 декабря — 25 декабря 2025</span></div>
+        </div>
+        <div class="olympiad-actions">
+          <span class="badge badge-municipal">Муниципальный</span>
+          <a href="olympiads.html" class="btn btn-outline btn-sm">Предметы →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT NEWS -->
+<section class="section" style="background:var(--bg-section)">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Последние новости</h2>
+        <p class="section-subtitle">Достижения учеников и события нашего центра.</p>
+      </div>
+      <a href="news.html" class="btn btn-outline">Все новости →</a>
+    </div>
+    <div class="grid-3">
+      <div class="news-card">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#e8f4fb,#fceef6)">🥇</div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="badge badge-green">Достижение</span>
+            <span class="news-date">10 апреля 2026</span>
+          </div>
+          <div class="news-card-title">Три призовых места на региональном этапе ВсОШ по математике</div>
+          <div class="news-card-excerpt">Ученики нашей школы завоевали 1 призёра и 2 победителя на региональном этапе. Поздравляем!</div>
+          <div class="news-card-footer">
+            <a href="news.html" class="btn btn-primary btn-sm">Читать →</a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#eef7f0,#d1e7ff)">📚</div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="badge badge-blue">Мероприятие</span>
+            <span class="news-date">5 апреля 2026</span>
+          </div>
+          <div class="news-card-title">Открытая лекция по олимпиадной физике для 9–11 классов</div>
+          <div class="news-card-excerpt">Призёр заключительного этапа ВсОШ по физике провёл разбор задач прошлых лет. Присутствовало более 40 человек.</div>
+          <div class="news-card-footer">
+            <a href="news.html" class="btn btn-primary btn-sm">Читать →</a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#fff3cd,#fce5f0)">🌟</div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="badge badge-pink">Обновление</span>
+            <span class="news-date">1 апреля 2026</span>
+          </div>
+          <div class="news-card-title">Обновлены материалы по химии и биологии</div>
+          <div class="news-card-excerpt">Добавлены новые конспекты по органической химии и молекулярной биологии. Материалы доступны в разделе предметов.</div>
+          <div class="news-card-footer">
+            <a href="news.html" class="btn btn-primary btn-sm">Читать →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="img/oc.png" alt="ОЦ" class="logo-img" onerror="this.style.display='none'">
+          <div class="logo-text">
+            <span class="logo-title">Олимпиадный Центр</span>
+            <span class="logo-subtitle">Гимназия №179</span>
+          </div>
+        </div>
+        <p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам и достигать результатов.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Разделы</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="olympiads.html">Олимпиады</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">О нас</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Предметы</div>
+        <ul class="footer-links">
+          <li><a href="subject.html?subject=math">Математика</a></li>
+          <li><a href="subject.html?subject=physics">Физика</a></li>
+          <li><a href="subject.html?subject=cs">Информатика</a></li>
+          <li><a href="subject.html?subject=english">Английский</a></li>
+          <li><a href="olympiads.html">Все 24 предмета →</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Контакты</div>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <span class="icon">📧</span>
+            <span>olympiadcentre@mail.ru</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">📱</span>
+            <span>Telegram: t.me/olympiadcenter179</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025–2027 Олимпиадный Центр Гимназии №179</span>
+      <span>Сделано учениками для учеников 🏆</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

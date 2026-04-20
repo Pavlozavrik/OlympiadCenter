@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас — Олимпиадный Центр</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="news.html" class="nav-link">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link active">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="page-hero" style="padding:80px 0">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>О нас</span>
+    </div>
+    <h1>Олимпиадный Центр</h1>
+    <p style="max-width:600px">Ученическая организация, созданная опытными олимпиадниками для тех, кто только начинает свой путь. Мы делимся советами, материалами для подготовки и всегда готовы поддержать каждого.</p>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="section mission-section">
+  <div class="container">
+    <div class="text-center" style="max-width:640px;margin:0 auto">
+      <p class="badge badge-blue mb-16" style="justify-content:center">Наша миссия</p>
+      <h2 class="section-title">Сделать олимпиадную подготовку доступной каждому</h2>
+      <p style="font-size:16px;color:var(--text-muted);margin-top:16px;line-height:1.7">Мы верим, что любой ученик при правильном направлении и доступе к ресурсам может показать выдающийся результат. Наша задача — убрать барьеры: информационный хаос, недостаток материалов и отсутствие наставников.</p>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-icon" style="background:var(--primary-light)">📅</div>
+        <h3>Информация</h3>
+        <p>Собираем и актуализируем даты всех олимпиад, дедлайны регистрации и условия участия в одном месте, чтобы вы ничего не пропустили.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon" style="background:var(--accent-light)">📂</div>
+        <h3>Материалы</h3>
+        <p>Подбираем и структурируем конспекты, сборники задач, разборы и ссылки по каждому из 24 предметов ВсОШ.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon" style="background:var(--green-light)">🤝</div>
+        <h3>Наставничество</h3>
+        <p>Кураторы центра — сами бывшие и действующие участники олимпиад — готовы давать советы, проводить разборы и консультации.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section" style="background:white">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Команда центра</h2>
+        <p class="section-subtitle">Кураторы по предметам — ученики, которые сами прошли путь олимпиадника.</p>
+      </div>
+    </div>
+
+    <!--
+    ═══════════════════════════════════════════════════════════
+    КАК ДОБАВИТЬ ФОТО УЧАСТНИКА КОМАНДЫ:
+
+    Шаг 1. Положите фото в папку img/
+           Имя файла рекомендуем: team-фамилия.jpg  (напр. team-petrov.jpg)
+           Размер: квадратное или близкое к нему, минимум 300×300 px.
+
+    Шаг 2. В блоке нужного участника найдите <div class="team-photo ...">
+           и замените всё содержимое на:
+           <img src="img/team-фамилия.jpg" alt="Имя Фамилия">
+
+           Было:
+           <div class="team-photo" style="background:...">👤</div>
+
+           Стало (с фото):
+           <div class="team-photo"><img src="img/team-petrov.jpg" alt="Петров Алексей"></div>
+
+    Фото автоматически подстроится под блок (object-fit: cover).
+    Если фото нет — оставьте эмодзи 👤, он служит заглушкой.
+    ═══════════════════════════════════════════════════════════
+
+    ═══════════════════════════════════════════════════════════
+    ДОСТУПНЫЕ ТЕГИ (badge) ДЛЯ УЧАСТНИКОВ КОМАНДЫ:
+
+    СТАНДАРТНЫЕ ТЕГИ — используйте для любого куратора:
+
+      Учитель:
+        <span class="badge badge-pink">Учитель</span>
+
+      Класс:
+        <span class="badge badge-blue">8 класс</span>
+        <span class="badge badge-blue">9 класс</span>
+        <span class="badge badge-blue">10 класс</span>
+        <span class="badge badge-blue">11 класс</span>
+
+      Региональный этап ВсОШ:
+        <span class="badge badge-regional">Призёр РЭ ВсОШ</span>
+        <span class="badge badge-regional">Победитель РЭ ВсОШ</span>
+
+      Заключительный этап ВсОШ:
+        <span class="badge badge-final">Призёр ЗЭ ВсОШ</span>
+        <span class="badge badge-final">Победитель ЗЭ ВсОШ</span>
+
+    СОЗДАНИЕ СВОЕГО ТЕГА — просто замените текст внутри <span>:
+      Можно использовать любой класс: badge-blue, badge-pink,
+      badge-green, badge-regional, badge-final, badge-municipal.
+      Пример:
+        <span class="badge badge-final">Призёр Менделеева</span>
+        <span class="badge badge-blue">Codeforces Expert</span>
+    ═══════════════════════════════════════════════════════════
+    -->
+
+    <!-- Руководство -->
+    <div style="margin-bottom:40px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:20px;display:flex;align-items:center;gap:10px">
+        ⭐ Руководство
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+
+        <div class="team-card">
+          <!-- ФОТО: замените содержимое div на <img src="img/team-petrov.jpg" alt="Петров Алексей"> -->
+          <div class="team-photo" style="display: flex; justify-content: center; align-items: center; height: 300px;"><img src="img/PavelAksenov.webp" alt="Павел Аксёнов"></div>
+          <div class="team-body">
+            <div class="team-name">Павел Аксёнов</div>
+            <div class="team-role">Руководитель центра · Китайский язык · Английский язык · Русский язык</div>
+            <div class="team-desc">Победитель регионального этапа ВсОШ по русскому языку, призёр по английскому и китайскому языкам.</div>
+            <div class="team-achievements">
+              <span class="badge badge-regional">Победитель РЭ ВсОШ</span>
+              <span class="badge badge-blue">10 класс</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-smirnova.jpg" alt="Смирнова Екатерина"> -->
+          <div class="team-photo" style="display: flex; justify-content: center; align-items: center; height: 300px;"><img src="img/ElenaVladimirovna.jpg" alt="Сиразиева Елена Владимировна"></div>
+          <div class="team-body">
+            <div class="team-name">Сиразиева Елена Владимировна</div>
+            <div class="team-role">Руководитель центра · Химия · Начальные классы</div>
+            <div class="team-desc">Учитель высшей квалификационной категории по химии и биологии, кандидат химических наук. Завуч по олимпиадному движению.</div>
+            <div class="team-achievements">
+              <span class="badge badge-pink">Учитель</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-orlov.jpg" alt="Орлов Дмитрий"> -->
+          <div class="team-photo" style="background:linear-gradient(135deg,var(--green-light),#d1fae5)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Орлов Дмитрий</div>
+            <div class="team-role">Зам. руководителя · Физика</div>
+            <div class="team-desc">Призёр регионального этапа ВсОШ по физике. Ведёт занятия по физике и астрономии.</div>
+            <div class="team-achievements">
+              <span class="badge badge-regional">Призёр РЭ ВсОШ</span>
+              <span class="badge badge-blue">10 класс</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Кураторы -->
+    <div>
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:20px;display:flex;align-items:center;gap:10px">
+        👥 Кураторы по предметам
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-nikitina.jpg" alt="Никитина Вера"> -->
+          <div class="team-photo" style="text-align: center;"><img src="img/PavelAksenov.webp" alt="Павел Аксёнов"></div>
+          <div class="team-body">
+            <div class="team-name">Никитина Вера</div>
+            <div class="team-role">Химия · Биология</div>
+            <div class="team-desc">Призёр Менделеевской олимпиады. Курирует естественные науки.</div>
+            <div class="team-achievements">
+              <span class="badge badge-final">Менделеев призёр</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-kovalenko.jpg" alt="Коваленко Максим"> -->
+          <div class="team-photo" style="background:linear-gradient(135deg,#e8f4fb,#dbeafe)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Коваленко Максим</div>
+            <div class="team-role">Экономика · Обществознание</div>
+            <div class="team-desc">Победитель «Высшей пробы» НИУ ВШЭ по экономике (I уровень).</div>
+            <div class="team-achievements">
+              <span class="badge badge-final">ВП победитель</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-zakharova.jpg" alt="Захарова Анна"> -->
+          <div class="team-photo" style="background:linear-gradient(135deg,#f3e8ff,#ede9fe)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Захарова Анна</div>
+            <div class="team-role">История · Литература</div>
+            <div class="team-desc">Победитель регионального этапа ВсОШ по истории.</div>
+            <div class="team-achievements">
+              <span class="badge badge-regional">Победитель РЭ ВсОШ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-vasiliev.jpg" alt="Васильев Игорь"> -->
+          <div class="team-photo" style="background:linear-gradient(135deg,#eef7f0,#d1fae5)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Васильев Игорь</div>
+            <div class="team-role">Информатика</div>
+            <div class="team-desc">Участник финала ВсОШ по информатике. Рейтинг Codeforces: Expert.</div>
+            <div class="team-achievements">
+              <span class="badge badge-final">CF Expert</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-morozova.jpg" alt="Морозова Полина"> -->
+          <div class="team-photo" style="background:linear-gradient(135deg,#fceef6,#fde8f5)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Морозова Полина</div>
+            <div class="team-role">Русский язык · МХК</div>
+            <div class="team-desc">Призёр регионального этапа ВсОШ по русскому языку.</div>
+            <div class="team-achievements">
+              <span class="badge badge-regional">Призёр РЭ ВсОШ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <!-- ФОТО: <img src="img/team-lebedev.jpg" alt="Лебедев Кирилл"> -->
+          <div class="team-photo" style="background:linear-gradient(135deg,#fff3cd,#fef9c3)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Лебедев Кирилл</div>
+            <div class="team-role">Немецкий · Французский</div>
+            <div class="team-desc">Призёр муниципального этапа по немецкому. Уровень C1 по TELC.</div>
+            <div class="team-achievements">
+              <span class="badge badge-municipal">ВсОШ призёр</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo" style="background:linear-gradient(135deg,#e8f4fb,#cffafe)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Тихонова Мария</div>
+            <div class="team-role">Биология · Экология</div>
+            <div class="team-desc">Призёр муниципального этапа по биологии. Участник олимпиады «Эколог года».</div>
+            <div class="team-achievements">
+              <span class="badge badge-municipal">ВсОШ призёр</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo" style="background:linear-gradient(135deg,#fef2f2,#fee2e2)">👤</div>
+          <div class="team-body">
+            <div class="team-name">Фёдоров Роман</div>
+            <div class="team-role">Астрономия · Физика</div>
+            <div class="team-desc">Призёр городской олимпиады по астрономии. Участник кружка МГУ.</div>
+            <div class="team-achievements">
+              <span class="badge badge-municipal">Астрономия призёр</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- History & Values -->
+<section class="section" style="background:var(--bg-light)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div>
+        <h2 class="section-title" style="margin-bottom:24px">История центра</h2>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div style="display:flex;gap:20px">
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0">1</div>
+              <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+            </div>
+            <div style="padding-bottom:28px">
+              <div style="font-size:13px;color:var(--primary);font-weight:600;margin-bottom:4px">2022 год</div>
+              <div style="font-size:15px;font-weight:700;margin-bottom:6px">Основание центра</div>
+              <div style="font-size:14px;color:var(--text-muted);line-height:1.6">Центр основали три ученика — победители регионального этапа ВсОШ. Начинали с простого: собирали задания прошлых лет в одну папку.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:20px">
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0">2</div>
+              <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+            </div>
+            <div style="padding-bottom:28px">
+              <div style="font-size:13px;color:var(--accent);font-weight:600;margin-bottom:4px">2023 год</div>
+              <div style="font-size:15px;font-weight:700;margin-bottom:6px">Первые занятия</div>
+              <div style="font-size:14px;color:var(--text-muted);line-height:1.6">Запустили регулярные занятия по математике и информатике. На первое занятие пришли 8 человек, через месяц — уже 30.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:20px">
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--green-dark);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0">3</div>
+              <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+            </div>
+            <div style="padding-bottom:28px">
+              <div style="font-size:13px;color:var(--green-dark);font-weight:600;margin-bottom:4px">2024 год</div>
+              <div style="font-size:15px;font-weight:700;margin-bottom:6px">Расширение до 24 предметов</div>
+              <div style="font-size:14px;color:var(--text-muted);line-height:1.6">Добавили кураторов по всем предметам ВсОШ. Первый раз проводили школьный тур в 7 предметах параллельно.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:20px">
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0">4</div>
+            </div>
+            <div style="padding-bottom:0">
+              <div style="font-size:13px;color:var(--text-muted);font-weight:600;margin-bottom:4px">2025–2027</div>
+              <div style="font-size:15px;font-weight:700;margin-bottom:6px">Запуск сайта</div>
+              <div style="font-size:14px;color:var(--text-muted);line-height:1.6">Создали этот сайт, чтобы вся информация была собрана в одном месте и доступна любому ученику школы.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title" style="margin-bottom:24px">Наши ценности</h2>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="background:white;border-radius:var(--radius);padding:24px;border:1px solid var(--border)">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+              <div style="width:40px;height:40px;border-radius:var(--radius-sm);background:var(--primary-light);display:flex;align-items:center;justify-content:center;font-size:20px">🤝</div>
+              <div style="font-size:16px;font-weight:700">Взаимопомощь</div>
+            </div>
+            <p style="font-size:14px;color:var(--text-muted);line-height:1.6">Мы помогаем бесплатно и без условий. Наша цель — чтобы как можно больше учеников смогли раскрыть свой потенциал.</p>
+          </div>
+          <div style="background:white;border-radius:var(--radius);padding:24px;border:1px solid var(--border)">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+              <div style="width:40px;height:40px;border-radius:var(--radius-sm);background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:20px">🎯</div>
+              <div style="font-size:16px;font-weight:700">Честность</div>
+            </div>
+            <p style="font-size:14px;color:var(--text-muted);line-height:1.6">Мы честно говорим о сложности олимпиад, реальных требованиях и временных затратах. Не обещаем лёгких побед.</p>
+          </div>
+          <div style="background:white;border-radius:var(--radius);padding:24px;border:1px solid var(--border)">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+              <div style="width:40px;height:40px;border-radius:var(--radius-sm);background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:20px">🌱</div>
+              <div style="font-size:16px;font-weight:700">Рост</div>
+            </div>
+            <p style="font-size:14px;color:var(--text-muted);line-height:1.6">Ценим процесс, а не только результат. Каждый этап — это опыт, который делает вас умнее, сильнее и целеустремлённее.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacts -->
+<section class="section contact-section" id="contacts">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Контакты</h2>
+        <p class="section-subtitle">Напишите нам — ответим в течение рабочего дня.</p>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:4px">Связаться с центром</h3>
+          <p style="font-size:14px;color:var(--text-muted)">По любым вопросам об олимпиадах, подготовке или работе центра.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">📧</div>
+              <div class="contact-item-text">
+                <label>Электронная почта</label>
+                <span>olympiadcentre@mail.ru</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">✈️</div>
+              <div class="contact-item-text">
+                <label>Telegram</label>
+                <span>t.me/olympiadcenter179</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:linear-gradient(135deg,var(--dark),#162242);border-radius:var(--radius-lg);padding:28px;color:white">
+          <div style="font-size:28px;margin-bottom:12px">📣</div>
+          <h4 style="font-size:16px;font-weight:700;margin-bottom:8px">Следите за новостями</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;margin-bottom:16px">Подпишитесь на наш Telegram-канал, чтобы первыми узнавать о дедлайнах, занятиях и достижениях.</p>
+          <a href="https://t.me/olympiadcenter179" class="btn btn-outline-white btn-sm">Telegram-канал →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><img src="img/oc.png" alt="ОЦ" class="logo-img" onerror="this.style.display='none'"><div class="logo-text"><span class="logo-title">Олимпиадный Центр</span><span class="logo-subtitle">Гимназия №179</span></div></div><p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам.</p></div>
+      <div><div class="footer-heading">Разделы</div><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="olympiads.html">Олимпиады</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">О нас</a></li></ul></div>
+      <div><div class="footer-heading">Предметы</div><ul class="footer-links"><li><a href="subject.html?subject=math">Математика</a></li><li><a href="subject.html?subject=physics">Физика</a></li><li><a href="subject.html?subject=cs">Информатика</a></li><li><a href="subject.html?subject=english">Английский</a></li><li><a href="olympiads.html">Все предметы →</a></li></ul></div>
+      <div><div class="footer-heading">Контакты</div><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📧</span><span>olympiadcentre@mail.ru</span></div><div class="footer-contact-item"><span class="icon">📱</span><span>Telegram: t.me/olympiadcenter179</span></div></div></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025–2027 Олимпиадный Центр Гимназии №179</span><span>Сделано учениками для учеников 🏆</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

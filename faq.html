@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Олимпиадный Центр</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="news.html" class="nav-link">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>FAQ</span>
+    </div>
+    <h1>Часто задаваемые вопросы</h1>
+    <p>Ответы на самые популярные вопросы об олимпиадах, подготовке и работе центра.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-sm">
+
+    <!-- Search -->
+    <div class="faq-search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="faq-search" placeholder="Введите вопрос для поиска..." />
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="faq-categories">
+      <button class="filter-btn active" data-filter="all" data-target="[data-category]">Все вопросы</button>
+      <button class="filter-btn" data-filter="vsosh" data-target="[data-category]">🏆 О ВсОШ</button>
+      <button class="filter-btn" data-filter="perechen" data-target="[data-category]">📋 Перечневые</button>
+      <button class="filter-btn" data-filter="prep" data-target="[data-category]">📚 Подготовка</button>
+      <button class="filter-btn" data-filter="center" data-target="[data-category]">🏫 О центре</button>
+      <button class="filter-btn" data-filter="results" data-target="[data-category]">🎓 Результаты и льготы</button>
+    </div>
+
+    <!-- ВсОШ -->
+    <div style="margin-bottom:12px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:10px">
+        🏆 Всероссийская олимпиада школьников
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+
+      <div class="accordion-item" data-category="vsosh">
+        <div class="accordion-header">
+          <span class="accordion-question">Что такое Всероссийская олимпиада школьников (ВсОШ)?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          ВсОШ — государственная олимпиада по 24 предметам для учеников 4–11 классов. Она проводится в четыре этапа: школьный, муниципальный, региональный и заключительный. Победители и призёры заключительного этапа получают право поступления в любой российский вуз без экзаменов по соответствующей специальности.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="vsosh">
+        <div class="accordion-header">
+          <span class="accordion-question">Какие этапы проходит ВсОШ и когда они проводятся?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          <strong>Школьный этап</strong> — октябрь–ноябрь, проводится в школе, участвуют все желающие с 4 класса.<br><br>
+          <strong>Муниципальный этап</strong> — декабрь, участвуют победители и призёры школьного этапа (обычно с 7–8 класса).<br><br>
+          <strong>Региональный этап</strong> — январь–февраль, участвуют победители и призёры муниципального этапа (9–11 класс).<br><br>
+          <strong>Заключительный этап</strong> — март–апрель, участвуют победители и призёры регионального этапа. Проводится на федеральном уровне в разных городах.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="vsosh">
+        <div class="accordion-header">
+          <span class="accordion-question">С какого класса можно участвовать в ВсОШ?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          В школьном этапе могут участвовать ученики с 4 класса по большинству предметов. Однако на муниципальный этап, как правило, допускаются учащиеся с 7–8 класса, а региональный и заключительный этапы ориентированы на 9–11 классы. Точные возрастные критерии зависят от предмета — уточняйте в положении каждой олимпиады.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="vsosh">
+        <div class="accordion-header">
+          <span class="accordion-question">Как записаться на школьный этап ВсОШ?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Заявку на участие нужно подавать через школу — как правило, через классного руководителя или учителя-предметника. В нашей школе заявки собирает куратор Олимпиадного Центра по соответствующему предмету. Следите за объявлениями в начале учебного года — регистрация открывается в сентябре–октябре.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="vsosh">
+        <div class="accordion-header">
+          <span class="accordion-question">Можно ли участвовать в нескольких предметах одновременно?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Да, формально никаких ограничений нет. Вы можете участвовать во всех 24 предметах. Однако важно учитывать, что расписание школьного этапа обычно составляется так, чтобы избежать совпадений. На муниципальном и региональном этапах расписание фиксировано, и при наложении дат придётся выбирать один предмет.
+        </div>
+      </div>
+    </div>
+
+    <!-- Perechnye -->
+    <div style="margin-bottom:12px;margin-top:40px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:10px">
+        📋 Перечневые олимпиады
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+
+      <div class="accordion-item" data-category="perechen">
+        <div class="accordion-header">
+          <span class="accordion-question">Что такое перечневые олимпиады и чем они отличаются от ВсОШ?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Перечневые олимпиады — это олимпиады, включённые Министерством просвещения РФ в официальный Перечень. Они организуются вузами и организациями (НИУ ВШЭ, МГУ, МФТИ и др.) и делятся на три уровня (I, II, III). Победители и призёры получают льготы при поступлении в вузы, но, в отличие от ВсОШ, льготы распространяются только на вузы, которые их признают. Полный список олимпиад есть на сайте Минпросвещения.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="perechen">
+        <div class="accordion-header">
+          <span class="accordion-question">Какие перечневые олимпиады самые престижные?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Олимпиады I уровня — наиболее престижные. К ним относятся: «Ломоносов» (МГУ), «Высшая проба» (НИУ ВШЭ), олимпиады МФТИ, Физтех-олимпиада, Менделеевская олимпиада по химии, олимпиада «Формула единства» / «Третье тысячелетие» по математике и другие. Победители олимпиад I уровня в большинстве вузов приравниваются к 100 баллам ЕГЭ по соответствующему предмету или дают право на зачисление без экзаменов.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="perechen">
+        <div class="accordion-header">
+          <span class="accordion-question">Когда проходит регистрация на перечневые олимпиады?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Большинство перечневых олимпиад начинают регистрацию в сентябре–октябре, а отборочный (заочный) тур проходит в октябре–декабре. Заключительный тур — обычно в феврале–апреле. Точные даты смотрите на странице каждого предмета в разделе «Олимпиады» на нашем сайте или на официальных сайтах олимпиад.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="perechen">
+        <div class="accordion-header">
+          <span class="accordion-question">Можно ли получить льготы по перечневой олимпиаде при поступлении в любой вуз?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Нет. Каждый вуз самостоятельно решает, какие олимпиады и какие льготы он признаёт. Список признаваемых олимпиад и условия льгот публикуются в «Правилах приёма» каждого вуза ежегодно. Перед участием в олимпиаде обязательно проверьте, признаёт ли интересующий вас вуз эту олимпиаду и что именно даёт победа или призёрство.
+        </div>
+      </div>
+    </div>
+
+    <!-- Preparation -->
+    <div style="margin-bottom:12px;margin-top:40px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:10px">
+        📚 Подготовка
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+
+      <div class="accordion-item" data-category="prep">
+        <div class="accordion-header">
+          <span class="accordion-question">С чего начать подготовку к олимпиаде?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          1. <strong>Выберите предмет</strong>, который вам интересен и в котором вы чувствуете потенциал.<br><br>
+          2. <strong>Изучите программу</strong> — посмотрите задания прошлых лет, чтобы понять, что от вас требуется.<br><br>
+          3. <strong>Найдите куратора или наставника</strong> — в Олимпиадном Центре есть кураторы по каждому предмету.<br><br>
+          4. <strong>Изучайте теорию и решайте задачи ежедневно</strong> — регулярность важнее интенсивности.<br><br>
+          5. <strong>Участвуйте в пробных олимпиадах</strong> — это помогает привыкнуть к формату и давлению.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="prep">
+        <div class="accordion-header">
+          <span class="accordion-question">Где найти задания прошлых лет?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Официальные задания ВсОШ публикуются на сайте <strong>olimpiada.ru</strong> и на сайтах региональных методических комиссий. Задания перечневых олимпиад есть на официальных сайтах организаторов. На нашем сайте в разделе каждого предмета собраны ссылки на лучшие источники и файлы для скачивания.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="prep">
+        <div class="accordion-header">
+          <span class="accordion-question">Сколько времени нужно на подготовку?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Зависит от предмета и желаемого уровня. Для уверенного выступления на школьном этапе достаточно 1–2 месяцев активной подготовки. Для муниципального уровня нужно полгода — год работы. Региональный и заключительный этапы требуют многолетней подготовки. Начинайте как можно раньше — лучше в 7–8 классе или даже раньше.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="prep">
+        <div class="accordion-header">
+          <span class="accordion-question">Можно ли готовиться самостоятельно без репетитора?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Да, многие победители олимпиад готовились самостоятельно. Главное — правильно подобрать материалы и решать много задач. Наш центр помогает с этим: мы публикуем подборки материалов, проводим разборы задач и консультации. Кроме того, полезны онлайн-школы (ЛМШ, летние школы при МГУ и других вузах) и кружки при университетах.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="prep">
+        <div class="accordion-header">
+          <span class="accordion-question">Что делать, если я не прошёл на следующий этап?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Не расстраиваться — это нормальная часть пути. Проанализируйте свои ошибки, разберите задания, которые не удалось решить. Поговорите с куратором. Помните: большинство победителей заключительного этапа участвовали в олимпиаде несколько лет подряд, прежде чем добились результата. Каждый этап — это опыт и ориентир для дальнейшей работы.
+        </div>
+      </div>
+    </div>
+
+    <!-- About Center -->
+    <div style="margin-bottom:12px;margin-top:40px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:10px">
+        🏫 О центре
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+
+      <div class="accordion-item" data-category="center">
+        <div class="accordion-header">
+          <span class="accordion-question">Что такое Олимпиадный Центр и чем он занимается?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Олимпиадный Центр — ученическая организация нашей школы. Мы отслеживаем даты и условия олимпиад по всем 24 предметам ВсОШ и перечневым олимпиадам, публикуем материалы для подготовки, проводим разборы задач и консультации, а также отмечаем достижения наших учеников. Всё это делают сами ученики — призёры и победители олимпиад.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="center">
+        <div class="accordion-header">
+          <span class="accordion-question">Как стать частью Олимпиадного Центра?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Мы приглашаем учеников, которые уже имеют опыт участия в олимпиадах (желательно призовые места на муниципальном уровне и выше) и хотят помогать другим. Обратитесь к любому из кураторов или напишите нам на почту — мы расскажем, как присоединиться. Можно участвовать в работе центра как куратор по предмету, редактор сайта, организатор мероприятий.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="center">
+        <div class="accordion-header">
+          <span class="accordion-question">Проводит ли центр занятия или кружки по подготовке?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Да, мы регулярно проводим занятия и разборы задач по наиболее популярным предметам: математике, физике, информатике и английскому языку. Расписание занятий публикуется в разделе «Новости» и в Telegram-канале. Занятия бесплатные и открыты для всех учеников школы.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="center">
+        <div class="accordion-header">
+          <span class="accordion-question">Где найти актуальные новости и обновления центра?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Следите за разделом «Новости» на этом сайте и за нашей группой ВКонтакте (t.me/olympiadcenter179). Там мы публикуем напоминания о дедлайнах регистрации, результаты олимпиад, анонсы занятий и достижения учеников.
+        </div>
+      </div>
+    </div>
+
+    <!-- Results & Benefits -->
+    <div style="margin-bottom:12px;margin-top:40px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:10px">
+        🎓 Результаты и льготы при поступлении
+        <span style="flex:1;height:1px;background:var(--border);display:block"></span>
+      </div>
+
+      <div class="accordion-item" data-category="results">
+        <div class="accordion-header">
+          <span class="accordion-question">Что даёт победа в ВсОШ при поступлении?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Победитель или призёр <strong>заключительного этапа ВсОШ</strong> получает право поступления без вступительных испытаний (БВИ) в любой российский вуз по специальностям, соответствующим профилю олимпиады. Это одна из самых весомых льгот при поступлении. Действует в год проведения олимпиады и в течение 4 лет после окончания школы (т.е. можно воспользоваться льготой после выпуска).
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="results">
+        <div class="accordion-header">
+          <span class="accordion-question">Что даёт победа на региональном этапе ВсОШ?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Победа на региональном этапе сама по себе не даёт федеральных льгот при поступлении в вузы, но является условием допуска к заключительному этапу. Кроме того, некоторые вузы учитывают региональные результаты при начислении дополнительных баллов. Победа на региональном уровне — это также весомое достижение для портфолио.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="results">
+        <div class="accordion-header">
+          <span class="accordion-question">Засчитываются ли результаты олимпиад при поступлении за рубеж?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Российские национальные олимпиады (ВсОШ) формально не признаются иностранными университетами в качестве автоматических льгот. Однако победа в престижной олимпиаде — сильный элемент портфолио для заявки в зарубежные вузы, особенно в Европе и США. Международные олимпиады (IMO, IPhO, IChO и др.) признаются значительно шире.
+        </div>
+      </div>
+
+      <div class="accordion-item" data-category="results">
+        <div class="accordion-header">
+          <span class="accordion-question">Как долго действует льгота по результатам олимпиады?</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-body">
+          Льготы по ВсОШ действуют в течение 4 лет с момента получения статуса победителя или призёра заключительного этапа. Для перечневых олимпиад срок действия льгот — 4 года с года проведения олимпиады. Важно: при поступлении льготой можно воспользоваться только один раз в один вуз по одной специальности.
+        </div>
+      </div>
+    </div>
+
+    <!-- Still have questions -->
+    <div style="margin-top:48px;background:linear-gradient(135deg,var(--primary-light),var(--accent-light));border-radius:var(--radius-xl);padding:40px;text-align:center">
+      <div style="font-size:40px;margin-bottom:16px">💬</div>
+      <h3 style="font-size:22px;font-weight:800;margin-bottom:10px">Не нашли ответ?</h3>
+      <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7">Напишите нам — кураторы центра ответят на ваш вопрос в течение дня.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="about.html#contacts" class="btn btn-primary">Написать нам</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><img src="img/oc.png" alt="ОЦ" class="logo-img" onerror="this.style.display='none'"><div class="logo-text"><span class="logo-title">Олимпиадный Центр</span><span class="logo-subtitle">Гимназия №179</span></div></div><p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам.</p></div>
+      <div><div class="footer-heading">Разделы</div><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="olympiads.html">Олимпиады</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">О нас</a></li></ul></div>
+      <div><div class="footer-heading">Предметы</div><ul class="footer-links"><li><a href="subject.html?subject=math">Математика</a></li><li><a href="subject.html?subject=physics">Физика</a></li><li><a href="subject.html?subject=cs">Информатика</a></li><li><a href="subject.html?subject=english">Английский</a></li><li><a href="olympiads.html">Все предметы →</a></li></ul></div>
+      <div><div class="footer-heading">Контакты</div><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📧</span><span>olympiadcentre@mail.ru</span></div><div class="footer-contact-item"><span class="icon">📱</span><span>Telegram: t.me/olympiadcenter179</span></div></div></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025–2027 Олимпиадный Центр Гимназии №179</span><span>Сделано учениками для учеников 🏆</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

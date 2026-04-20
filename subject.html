@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Предмет — Олимпиадный Центр</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="subject-page">
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="news.html" class="nav-link">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link active">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Subject Hero (filled by JS) -->
+<section class="subject-hero">
+  <div class="container">
+    <div class="breadcrumb" style="margin-bottom:20px">
+      <a href="index.html" style="color:rgba(255,255,255,0.6)">Главная</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="olympiads.html" style="color:rgba(255,255,255,0.6)">Олимпиады</a>
+      <span class="breadcrumb-sep">›</span>
+      <span id="subject-name-bc" style="color:white">—</span>
+    </div>
+    <div class="subject-hero-inner">
+      <div class="subject-hero-icon">
+        <span id="subject-emoji">📐</span>
+      </div>
+      <div class="subject-hero-text">
+        <h1 id="subject-name">Загрузка...</h1>
+        <p id="subject-desc">Информация загружается...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tabs -->
+<div class="subject-tabs">
+  <div class="container" style="display:flex;padding:0 24px">
+    <button class="subject-tab active" data-tab="tab-olympiads">🏆 Олимпиады</button>
+    <button class="subject-tab" data-tab="tab-materials">📂 Материалы</button>
+    <button class="subject-tab" data-tab="tab-tips">💡 Советы</button>
+  </div>
+</div>
+
+<div class="container">
+  <div style="padding:40px 0 80px">
+
+    <!-- TAB: Olympiads -->
+    <div id="tab-olympiads" class="subject-tab-content active">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px">
+        <div>
+          <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Олимпиады по предмету</h2>
+          <p style="font-size:14px;color:var(--text-muted)">ВсОШ и перечневые олимпиады 2025/2026 учебного года</p>
+        </div>
+        <div class="filter-bar" style="margin-bottom:0">
+          <button class="filter-btn level-filter-btn active" data-level="all">Все олимпиады</button>
+          <button class="filter-btn filter-btn--vsosh level-filter-btn" data-level="vsosh">
+            <span class="btn-dot"></span>ВсОШ
+          </button>
+          <button class="filter-btn filter-btn--perechen level-filter-btn" data-level="perechen">
+            <span class="btn-dot"></span>Перечневая
+          </button>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center">
+        <span style="font-size:12px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em">ВсОШ:</span>
+        <span class="badge badge-school" style="font-size:11px">Школьный</span>
+        <span class="badge badge-municipal" style="font-size:11px">Муниципальный</span>
+        <span class="badge badge-regional" style="font-size:11px">Региональный</span>
+        <span class="badge badge-vsosh-final" style="font-size:11px">Заключительный</span>
+        <span style="width:1px;height:18px;background:var(--border);display:inline-block;margin:0 4px"></span>
+        <span style="font-size:12px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Перечень:</span>
+        <span class="badge badge-p1" style="font-size:11px">I уровень</span>
+        <span class="badge badge-p2" style="font-size:11px">II уровень</span>
+        <span class="badge badge-p3" style="font-size:11px">III уровень</span>
+      </div>
+
+      <div class="olympiad-list" id="olympiad-list">
+        <p class="text-muted">Загрузка...</p>
+      </div>
+
+      <!-- Note -->
+      <div style="margin-top:24px;background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;font-size:13px;color:var(--text-muted);display:flex;gap:12px;align-items:flex-start">
+        <span style="font-size:18px">⚠️</span>
+        <span>Даты приблизительные и могут меняться. Уточняйте актуальную информацию на официальных сайтах олимпиад и следите за новостями центра.</span>
+      </div>
+    </div>
+
+    <!-- TAB: Materials -->
+    <div id="tab-materials" class="subject-tab-content">
+      <div style="margin-bottom:32px">
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Материалы для подготовки</h2>
+        <p style="font-size:14px;color:var(--text-muted)">Конспекты, сборники задач и ресурсы, подобранные кураторами центра.</p>
+      </div>
+      <div class="materials-grid" id="materials-grid">
+        <p class="text-muted">Загрузка...</p>
+      </div>
+
+      <div style="margin-top:40px;background:linear-gradient(135deg,var(--primary-light),var(--accent-light));border-radius:var(--radius-lg);padding:32px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+        <div style="font-size:40px">📬</div>
+        <div style="flex:1;min-width:200px">
+          <h3 style="font-size:17px;font-weight:700;margin-bottom:6px">Хочешь добавить материал?</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.6">Если у тебя есть полезный конспект, сборник задач или ссылка — пришли нам! Мы проверим и добавим в раздел.</p>
+        </div>
+        <a href="about.html#contacts" class="btn btn-primary">Связаться с нами</a>
+      </div>
+    </div>
+
+    <!-- TAB: Tips -->
+    <div id="tab-tips" class="subject-tab-content">
+      <div style="margin-bottom:32px">
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Советы по подготовке</h2>
+        <p style="font-size:14px;color:var(--text-muted)">Рекомендации от призёров и кураторов Олимпиадного Центра.</p>
+      </div>
+      <div class="tips-grid" id="tips-grid">
+        <p class="text-muted">Загрузка...</p>
+      </div>
+
+      <div style="margin-top:40px;background:var(--dark);border-radius:var(--radius-lg);padding:36px;color:white;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">🗣️</div>
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:10px">Нужна личная консультация?</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.7">Куратор по предмету готов ответить на вопросы и помочь выстроить план подготовки лично для тебя.</p>
+        <a href="about.html" class="btn btn-outline-white">Найти куратора →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><img src="img/oc.png" alt="ОЦ" class="logo-img" onerror="this.style.display='none'"><div class="logo-text"><span class="logo-title">Олимпиадный Центр</span><span class="logo-subtitle">Гимназия №179</span></div></div><p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам.</p></div>
+      <div><div class="footer-heading">Разделы</div><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="olympiads.html">Олимпиады</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">О нас</a></li></ul></div>
+      <div><div class="footer-heading">Предметы</div><ul class="footer-links"><li><a href="subject.html?subject=math">Математика</a></li><li><a href="subject.html?subject=physics">Физика</a></li><li><a href="subject.html?subject=cs">Информатика</a></li><li><a href="subject.html?subject=english">Английский</a></li><li><a href="olympiads.html">Все предметы →</a></li></ul></div>
+      <div><div class="footer-heading">Контакты</div><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📧</span><span>olympiadcentre@mail.ru</span></div><div class="footer-contact-item"><span class="icon">📱</span><span>Telegram: t.me/olympiadcenter179</span></div></div></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025–2027 Олимпиадный Центр Гимназии №179</span><span>Сделано учениками для учеников 🏆</span></div></div>
+</footer>
+
+<script src="js/subjects-data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
