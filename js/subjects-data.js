@@ -308,7 +308,7 @@ const SUBJECTS = {
     materials: [
       { icon: '📝', title: 'Страноведение Великобритании', desc: 'Пособие Ю. Б. Голицынского с подробной информацией про историю и современные реалии Великобритании.', file:"files/English/golycinsky_uk.pdf" },
       { icon: '🎧', title: 'Сборник олимпиадных заданий Olympway', desc: 'Олимпиадные задания, разработанные главой ЦПМК А. П. Гуловым - считаются одними из самых сложных, но в то же время их решение крайне полезно.', file: 'files/English/olimpway.pdf' },
-      { icon: '✍️', title: 'English Vocabulary In Use: Advanced', desc: 'Учебник для расширения словарного запаса до уровня Advanced.', file: 'files/English/vocabulary_in_use_advanced.pdf' },
+      { icon: '✍️', title: 'English Vocabulary In Use: Upper-Intermediate', desc: 'Учебник для расширения словарного запаса до уровня Upper-Intermediate (B2+).', file: 'files/English/4_English_Vocabulary_in_Use_-_Upper-Intermediat.pdf' },
       { icon: '📚', title: 'Лингвистика английского', desc: 'Фонетика, морфология, синтаксис. Задания лингвистического тура.', file: '#' },
       { icon: '🌍', title: 'Страноведение — факты', desc: 'История, культура, реалии англоязычных стран.', file: '#' },
       { icon: '🗣️', title: 'Устная часть — подготовка', desc: 'Типовые темы монологов и диалогов. Критерии оценки.', file: '#' },
