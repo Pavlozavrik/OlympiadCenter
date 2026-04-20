@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Олимпиады — Олимпиадный Центр</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder" style="display:none">ОЦ</div>
+        <div class="logo-text">
+          <span class="logo-title">Олимпиадный Центр</span>
+          <span class="logo-subtitle">Гимназия №179</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="news.html" class="nav-link">Новости</a></li>
+          <li><a href="olympiads.html" class="nav-link active">Олимпиады</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Олимпиады</span>
+    </div>
+    <h1>Все предметы ВсОШ</h1>
+    <p>Выберите предмет, чтобы увидеть даты олимпиад, материалы для подготовки и советы от призёров.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Category Filter -->
+    <div class="filter-bar" style="margin-bottom:40px">
+      <button class="filter-btn active" data-filter="all" data-target=".subjects-category">Все предметы</button>
+      <button class="filter-btn" data-filter="exact" data-target=".subjects-category">⚙️ Точные науки</button>
+      <button class="filter-btn" data-filter="natural" data-target=".subjects-category">🌿 Естественные</button>
+      <button class="filter-btn" data-filter="humanities" data-target=".subjects-category">📚 Гуманитарные</button>
+      <button class="filter-btn" data-filter="languages" data-target=".subjects-category">🌐 Языки</button>
+      <button class="filter-btn" data-filter="practical" data-target=".subjects-category">🔧 Практические</button>
+    </div>
+
+    <!-- Exact Sciences -->
+    <div class="subjects-category" data-category="exact">
+      <div class="subjects-category-title">⚙️ Точные науки</div>
+      <div class="subjects-icon-row">
+        <a class="subj-btn subj-math"  href="subject.html?subject=math"       title="Математика"></a>
+        <a class="subj-btn subj-phys"  href="subject.html?subject=physics"    title="Физика"></a>
+        <a class="subj-btn subj-it"    href="subject.html?subject=cs"         title="Информатика и ИКТ"></a>
+        <a class="subj-btn subj-astro" href="subject.html?subject=astronomy"  title="Астрономия"></a>
+      </div>
+    </div>
+
+    <!-- Natural Sciences -->
+    <div class="subjects-category" data-category="natural">
+      <div class="subjects-category-title">🌿 Естественные науки</div>
+      <div class="subjects-icon-row">
+        <a class="subj-btn subj-chem" href="subject.html?subject=chemistry"  title="Химия"></a>
+        <a class="subj-btn subj-bio"  href="subject.html?subject=biology"    title="Биология"></a>
+        <a class="subj-btn subj-geo"  href="subject.html?subject=geography"  title="География"></a>
+        <a class="subj-btn subj-eco"  href="subject.html?subject=ecology"    title="Экология"></a>
+      </div>
+    </div>
+
+    <!-- Humanities -->
+    <div class="subjects-category" data-category="humanities">
+      <div class="subjects-category-title">📚 Гуманитарные науки</div>
+      <div class="subjects-icon-row">
+        <a class="subj-btn subj-rus"  href="subject.html?subject=russian"    title="Русский язык"></a>
+        <a class="subj-btn subj-lit"  href="subject.html?subject=literature" title="Литература"></a>
+        <a class="subj-btn subj-hist" href="subject.html?subject=history"    title="История"></a>
+        <a class="subj-btn subj-soc"  href="subject.html?subject=social"     title="Обществознание"></a>
+        <a class="subj-btn subj-econ" href="subject.html?subject=economics"  title="Экономика"></a>
+        <a class="subj-btn subj-law"  href="subject.html?subject=law"        title="Право"></a>
+        <a class="subj-btn subj-art"  href="subject.html?subject=art"        title="Искусство (МХК)"></a>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="subjects-category" data-category="languages">
+      <div class="subjects-category-title">🌐 Иностранные языки</div>
+      <div class="subjects-icon-row">
+        <a class="subj-btn subj-eng" href="subject.html?subject=english"  title="Английский язык"></a>
+        <a class="subj-btn subj-deu" href="subject.html?subject=german"   title="Немецкий язык"></a>
+        <a class="subj-btn subj-fr"  href="subject.html?subject=french"   title="Французский язык"></a>
+        <a class="subj-btn subj-sp"  href="subject.html?subject=spanish"  title="Испанский язык"></a>
+        <a class="subj-btn subj-cn"  href="subject.html?subject=chinese"  title="Китайский язык"></a>
+        <a class="subj-btn subj-ita" href="subject.html?subject=italian"  title="Итальянский язык"></a>
+      </div>
+    </div>
+
+    <!-- Practical -->
+    <div class="subjects-category" data-category="practical">
+      <div class="subjects-category-title">🔧 Практические дисциплины</div>
+      <div class="subjects-icon-row">
+        <a class="subj-btn subj-tech" href="subject.html?subject=technology" title="Технология"></a>
+        <a class="subj-btn subj-pe"   href="subject.html?subject=pe"         title="Физическая культура"></a>
+        <a class="subj-btn subj-safe" href="subject.html?subject=safety"     title="ОБЖ"></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><img src="img/oc.png" alt="ОЦ" class="logo-img" onerror="this.style.display='none'"><div class="logo-text"><span class="logo-title">Олимпиадный Центр</span><span class="logo-subtitle">Гимназия №179</span></div></div><p class="footer-desc">Ученическая организация, которая помогает школьникам готовиться к олимпиадам.</p></div>
+      <div><div class="footer-heading">Разделы</div><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="olympiads.html">Олимпиады</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">О нас</a></li></ul></div>
+      <div><div class="footer-heading">Предметы</div><ul class="footer-links"><li><a href="subject.html?subject=math">Математика</a></li><li><a href="subject.html?subject=physics">Физика</a></li><li><a href="subject.html?subject=cs">Информатика</a></li><li><a href="subject.html?subject=english">Английский</a></li><li><a href="olympiads.html">Все предметы →</a></li></ul></div>
+      <div><div class="footer-heading">Контакты</div><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📧</span><span>olympiadcentre@mail.ru</span></div><div class="footer-contact-item"><span class="icon">📱</span><span>Telegram: t.me/olympiadcenter179</span></div></div></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container"><div class="footer-bottom"><span>© 2025–2027 Олимпиадный Центр Гимназии №179</span><span>Сделано учениками для учеников 🏆</span></div></div>
+</footer>
+
+<script src="js/subjects-data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
